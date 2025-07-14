@@ -129,7 +129,7 @@ streamlit run tracker/dashboard.py
 - View results in a clean interactive table
 - See a **bar chart of event type distribution**
 
-> The dashboard connects directly to your local Cassandra database and is a great way to showcase your data modeling and analytics skills.
+> The dashboard connects directly to your local Cassandra database.
 
 ### 📷 Screenshots
 <p align="center">
