@@ -2,7 +2,7 @@
 
 A simple but powerful real-time user activity tracker built with **Cassandra** and **Python**.  
 This project simulates website user behavior (clicks, logins, purchases, etc.) and stores the data in a high-performance Cassandra database.  
-It also supports querying and retrieving user activity efficiently using partition keys and clustering.
+It supports both command-line and web-based querying of user activity, with a Streamlit dashboard for interactive data exploration.
 
 ---
 
@@ -45,15 +45,16 @@ This repository is part of my preparation for roles that require hands-on experi
 ```
 user-activity-tracker/
 ├── cassandra_setup/
-│   └── schema.cql           # Cassandra keyspace and table definition
+│ └── schema.cql # Cassandra keyspace and table definition
 ├── data/
-│   └── sample_users.json    # (Optional) test data
+│ └── sample_users.json # (Optional) test data
 ├── tracker/
-│   ├── producer.py          # Simulates and inserts events into Cassandra
-│   ├── query.py             # Fetches events for a specific user
-│   └── utils.py             # Utility functions (TBD)
+│ ├── producer.py # Simulates and inserts events into Cassandra
+│ ├── query.py # Command-line querying of events
+│ ├── dashboard.py # Streamlit dashboard for visualization
+│ └── utils.py # (Optional) reusable helpers
 ├── requirements.txt
-├── docker-compose.yml       # Docker config to run Cassandra
+├── docker-compose.yml # Docker config to run Cassandra
 ├── .gitignore
 └── README.md
 ```
@@ -112,6 +113,32 @@ python tracker/query.py
 
 ---
 
+## 🖥️ Streamlit Dashboard UI
+
+Launch the dashboard to interactively explore user activity stored in Cassandra:
+
+### ▶️ Run the Dashboard
+```bash
+streamlit run tracker/dashboard.py
+```
+
+### 🔎 Features
+- Select from the **most recently active users**
+- Filter events by type (click, login, etc.)
+- Adjust how many events to retrieve
+- View results in a clean interactive table
+- See a **bar chart of event type distribution**
+
+> The dashboard connects directly to your local Cassandra database and is a great way to showcase your data modeling and analytics skills.
+
+### 📷 Screenshots
+<p align="center">
+  <img width="723" height="431" alt="image" src="https://github.com/user-attachments/assets/b0dad071-4149-45c5-87e9-2898c631a841" />
+    <img width="715" height="885" alt="image" src="https://github.com/user-attachments/assets/f030aee9-3aa6-45f2-bfd3-0a09b4bec169" />
+</p>
+
+---
+
 ## 🧠 Cassandra Schema Design
 
 ```sql
@@ -134,7 +161,7 @@ CREATE TABLE user_events (
 
 - [ ] Add REST API with FastAPI
 - [ ] Stream events to Cassandra in real time (Kafka integration)
-- [ ] Dashboard UI using Streamlit
+- [X] Dashboard UI using Streamlit
 - [ ] Support event filtering by type
 
 ---
