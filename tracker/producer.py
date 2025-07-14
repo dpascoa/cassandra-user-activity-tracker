@@ -25,10 +25,13 @@ def insert_event(user_id):
     print(f"{user_id} - {event_type} at {now}")
 
 if __name__ == "__main__":
-    """ for _ in range(10):  # simulate 10 events
+    # Simulate 10 events with random user IDs - comment out if needed
+    for _ in range(10):  
         insert_event(fake.uuid4())
-        time.sleep(1) """
-    user_id = fake.uuid4()
+        time.sleep(1)
+    
+    # Simulate user activity for the same user - comment out if needed
+    """ user_id = fake.uuid4()
     for _ in range(10):
         insert_event(user_id)
-        time.sleep(1)
+        time.sleep(1) """

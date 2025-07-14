@@ -11,4 +11,4 @@ def get_user_events(user_id, limit=5):
         print(row)
 
 # Replace with actual UUID used in producer.py
-get_user_events('37a8d965-1e34-44bb-a9eb-322ae67dce84')
+get_user_events('some-uuid-here')
