@@ -68,7 +68,7 @@ cd user-activity-tracker
 
 ### 2. Set up Python virtual environment
 ```bash
-python3.11 -m venv venv      # or use 3.10 if preferred
+python -3.11 -m venv venv      # or use 3.10 if preferred
 source venv/bin/activate     # On Windows: venv\Scripts\activate    
 pip install -r requirements.txt
 ```
