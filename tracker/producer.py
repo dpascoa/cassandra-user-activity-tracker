@@ -26,12 +26,13 @@ def insert_event(user_id):
 
 if __name__ == "__main__":
     # Simulate 10 events with random user IDs - comment out if needed
-    for _ in range(10):  
+    """ for _ in range(10):  
         insert_event(fake.uuid4())
-        time.sleep(1)
-    
-    # Simulate user activity for the same user - comment out if needed
-    """ user_id = fake.uuid4()
-    for _ in range(10):
-        insert_event(user_id)
         time.sleep(1) """
+    
+    for _ in range(random.randint(10, 20)):
+        # Simulate user activity for the same user - comment out if needed
+        user_id = fake.uuid4()
+        for _ in range(random.randint(5, 12)):
+            insert_event(user_id)
+            time.sleep(0.2)

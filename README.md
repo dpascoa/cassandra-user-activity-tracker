@@ -23,7 +23,9 @@ This repository is part of my preparation for roles that require hands-on experi
 
 - ⏱️ Simulate real-time user events (views, clicks, logins, etc.)
 - 📦 Store events in a Cassandra table designed for fast querying
-- 🔍 Query latest events per user
+- 🔍 Query latest events per user from the command line or dashboard
+- 📊 Interactive dashboard UI using **Streamlit**
+- 🧠 Visualize event distribution with charts
 - ⚙️ Fully dockerized Cassandra instance
 - 📄 Clean and production-ready Python codebase
 
@@ -68,7 +70,7 @@ cd user-activity-tracker
 
 ### 2. Set up Python virtual environment
 ```bash
-python -3.11 -m venv venv      # or use 3.10 if preferred
+py -3.11 -m venv venv      # or use 3.10 if preferred
 source venv/bin/activate     # On Windows: venv\Scripts\activate    
 pip install -r requirements.txt
 ```
